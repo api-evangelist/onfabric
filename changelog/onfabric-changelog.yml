@@ -1,0 +1,60 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/onfabric/context-use/blob/main/CHANGELOG.md
+product: context-use
+scheme: semver
+current_version: 0.19.0
+notes: >-
+  Dated, keep-a-changelog-style CHANGELOG maintained in the context-use repo.
+  Entries flag breaking changes explicitly with [**breaking**]. Recent window
+  captured below.
+entries:
+  - version: 0.19.0
+    date: '2026-04-20'
+    breaking: false
+    highlights:
+      - Add embedding search methods
+      - Batch embedding pipeline
+  - version: 0.18.1
+    date: '2026-04-15'
+    breaking: false
+    highlights:
+      - Add task_id filtering to get_unprocessed_threads
+  - version: 0.18.0
+    date: '2026-04-14'
+    breaking: false
+    highlights:
+      - Store error count on ETLTask
+      - Add per-item model validation in pipes
+  - version: 0.17.0
+    date: '2026-04-13'
+    breaking: false
+    highlights:
+      - Asset descriptions pipeline
+      - Add thread.content for semantic representation
+      - Add autogen pipe for telegram conversations
+  - version: 0.16.1
+    date: '2026-03-25'
+    breaking: false
+    highlights:
+      - Vertex AI lite llm gcs config fix
+  - version: 0.16.0
+    date: '2026-03-25'
+    breaking: false
+    highlights:
+      - Basic memory pipeline for google
+      - Do not bound memory generation
+  - version: 0.15.0
+    date: '2026-03-23'
+    breaking: true
+    highlights:
+      - Store threads before callback (breaking)
+      - Return inserted thread ids from insert_threads (breaking)
+      - Allow proxy clients to control enrichment
+  - version: 0.14.0
+    date: '2026-03-22'
+    breaking: true
+    highlights:
+      - Add recent threads from collection to group context
+      - Add optional collection_id to thread (breaking)
+      - Require credentials and bucket name in VertexAIConfig (breaking)

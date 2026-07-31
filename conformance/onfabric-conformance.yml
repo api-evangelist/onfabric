@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.onfabric.io/business
+note: >-
+  OnFabric publishes a compliance posture on its marketing and privacy pages.
+  No OpenAPI/OAuth/OIDC/FHIR/SCIM surface exists to derive cross-cutting API
+  standards from — context-use is a local tool and the hosted Fabric product
+  does not publish an API spec. Standards below reflect published claims only.
+standards:
+  - id: soc2
+    conforms: true
+    evidence: '"SOC 2 Certified" published on onfabric.io (homepage, /business, /privacy-policy)'
+  - id: gdpr
+    conforms: true
+    evidence: '"GDPR Compliant" published on onfabric.io (homepage, /business, /privacy-policy)'
+compliance:
+  certifications: [SOC 2, GDPR]
+  source: https://www.onfabric.io/business

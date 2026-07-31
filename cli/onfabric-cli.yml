@@ -1,0 +1,60 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/onfabric/context-use/blob/main/README.md
+name: context-use
+summary: >-
+  First-party CLI shipped with the context-use Python package. Turns personal
+  data exports (ChatGPT, Claude, Instagram, Google, Netflix, Airbnb) into a
+  local SQLite memory store, runs an OpenAI-compatible enrichment proxy, and
+  drives a personal memory agent. Runs entirely locally; requires an OpenAI API
+  key for memory generation.
+install:
+  - pip install context-use
+  - uv tool install context-use
+entry_point: context_use.cli:main
+config_file: ~/.config/context-use/config.toml
+command_groups:
+  - group: proxy
+    description: OpenAI-compatible enrichment proxy that turns each conversation into memories.
+    commands:
+      - command: context-use proxy --upstream-url https://api.openai.com
+        description: Start the local proxy; enriches POST /v1/chat/completions and /v1/responses.
+  - group: pipeline
+    description: Bulk-import and process a zipped data export into memories.
+    commands:
+      - command: context-use pipeline --quick <provider> <path-to-zip>
+        description: Quickstart mode using the real-time LLM API (last ~30 days; rate-limit-prone).
+      - command: context-use pipeline <provider> <path-to-zip>
+        description: Full pipeline using the batch LLM API (cheaper; runs 2-10 min).
+  - group: ingest
+    description: Parse individual archives, then generate memories in one pass.
+    commands:
+      - command: context-use ingest <export.zip>
+        description: Parse an archive without running the full pipeline.
+  - group: memories
+    description: Browse, search, and manage the local memory store.
+    commands:
+      - command: context-use memories list [--limit N]
+      - command: context-use memories search "<query>" [--top-k N] [--from DATE --to DATE]
+      - command: context-use memories get <uuid>
+      - command: context-use memories create --content "..." [--from DATE --to DATE]
+      - command: context-use memories update <id> --content "..."
+      - command: context-use memories archive <id...> --superseded-by <new-id>
+      - command: context-use memories generate
+      - command: context-use memories export [--format json] [--out FILE]
+  - group: agent
+    description: Multi-turn personal agent over the full memory store.
+    commands:
+      - command: context-use agent synthesise
+        description: Distill higher-level pattern memories from events.
+      - command: context-use agent profile
+        description: Compile a first-person user profile.
+      - command: context-use agent ask "<question>"
+        description: Free-form memory task.
+  - group: config
+    description: Manage configuration and the OpenAI API key.
+    commands:
+      - command: context-use config show
+      - command: context-use config set-key <key>
+      - command: context-use config --help
+supported_providers: [chatgpt, claude, instagram, google, netflix, airbnb]

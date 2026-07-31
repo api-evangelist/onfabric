@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://pypi.org/project/context-use/
+packages:
+  - language: python
+    registry: pypi
+    name: context-use
+    version: 0.19.0
+    url: https://pypi.org/project/context-use/
+    repository: https://github.com/onfabric/context-use
+    install: pip install context-use
+    license: MIT
+    requires_python: '>=3.12'
+    official: true
+    kind: library+cli
+    description: >-
+      Portable AI memory from your conversations and data exports. Importable as
+      a Python library (from context_use import ContextUse, ContextProxy,
+      create_proxy_app) and exposes the `context-use` CLI (console_scripts entry
+      point context_use.cli:main).
+notes: >-
+  Only first-party package found. context-use is published under the onfabric
+  GitHub organization and PyPI maintainer "onfabric". No npm, Maven, NuGet,
+  RubyGems, Packagist, or crates.io first-party client libraries were found;
+  OnFabric ships a single Python distribution that is both a library and a CLI.

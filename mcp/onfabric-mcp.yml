@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://www.onfabric.io/business
+server:
+  name: Fabric MCP
+  vendor: OnFabric
+  transport: unknown
+  url: null
+  description: >-
+    OnFabric advertises a hosted "Fabric MCP server" that brings a user's
+    personal context (curated from Google searches, YouTube, Instagram and other
+    connected sources) to LLM clients such as ChatGPT and Claude. The connection
+    is provisioned through the Fabric beta onboarding; a public connection URL /
+    tool manifest is not published on the open web, so no server URL or tool list
+    is recorded here (no fabrication).
+provisioning:
+  beta_onboarding: https://app.onfabric.io/onboarding
+  developer_portal: https://www.context-use.com
+related_open_source:
+  - repo: https://github.com/onfabric/context-use
+    note: >-
+      The open-source context-use tool ships an Agent Skill (skills/context-use)
+      rather than an MCP server; the personal-context MCP surface is the hosted
+      Fabric product.

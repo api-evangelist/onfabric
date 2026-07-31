@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/onfabric/context-use/blob/main/skills/context-use/SKILL.md
+note: >-
+  Provider-published Agent Skill, saved verbatim from the context-use repository
+  (skills/context-use/SKILL.md). Not grounded in an OpenAPI operationId set —
+  context-use is a local CLI/library, so the skill drives CLI commands rather
+  than REST operations.
+skills:
+  - file: onfabric-context-use.md
+    name: context-use
+    description: Personal memory from real data exports; search/manage memories before answering anything personal.
+    surface: cli
+    tool: context-use
