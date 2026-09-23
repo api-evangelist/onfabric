@@ -1,0 +1,30 @@
+# Front Door AI Index — onfabric — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: onfabric
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: onfabric.io
+  final_host: onfabric.io
+  ownership: own
+  owner: onfabric
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 14
+  host_score: 14
+  density: 24.26
+  words: 577
+  tiers:
+    agentic: 4
+    core: 7
+    model: 3
+  ambiguous: 0
+  top_terms:
+    AI: 6
+    prompts: 3
+    Claude: 2
+    ChatGPT: 1
+    LLMs: 1
+    MCP: 1

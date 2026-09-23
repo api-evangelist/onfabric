@@ -1,11 +1,15 @@
 generated: '2026-07-20'
 method: searched
 host: https://onfabric.io
-note: >-
-  Probed the standard discovery surface on the primary web host. None of the
-  well-known documents are published (all 404). Recorded for completeness —
-  absence is valid data.
-documents:
+note: Probed the standard discovery surface on the primary web host. None of the well-known documents
+  are published (all 404). Recorded for completeness — absence is valid data.
+also_probed:
+- host: https://www.context-use.com
+  path: /llms.txt
+  status: 404
+hosts:
+- host: https://onfabric.io
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -16,9 +20,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
-  - path: /robots.txt
-    status: 404
-also_probed:
-  - host: https://www.context-use.com
-    path: /llms.txt
-    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
